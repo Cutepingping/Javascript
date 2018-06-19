@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Array Type method</title>
+    <script type="text/javascript">
+        //push() pop()
+        var colors = new Array();                     //create an array
+        var count = colors.push("red","green");       //push two items
+        alert(count);               //2
+        count = colors.push("black");                  //push another item on
+        alert(count);               //3
+        var item01 = colors.pop();                     //get the last item
+        alert(item01);               //"black"
+        alert(colors.length);        //2
+
+        //push() shift()
+        var  item02 = colors.shift();                  //get the first item
+        alert(item02);               //"red"
+        alert(colors.length);        //1
+
+        //unshift() pop()
+        var colors01 = new Array();                     //create an array
+        var count = colors01.unshift("red","green");    //push two items
+        alert(count);                 //2
+        count =  colors01.unshift("black");
+        alert(count);                 //3
+        var item = colors01.pop();                        //get the first item
+        alert(item);                  //"green"
+        alert(colors01.length)        //2
+    </script>
+</head>
+<body>
+</body>
+</html>
 
