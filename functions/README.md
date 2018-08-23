@@ -1,2 +1,2 @@
-function-stage-1
+# function-stage-1
    使用了我们定义的第一个参数msgText，对于第二个参数msgType，这个就涉及了稍微多一点的东西— 我们要设置一些依赖于这个 msgType 参数的东西, 我们的函数将会显示不同的图标和不同的背景颜色。
