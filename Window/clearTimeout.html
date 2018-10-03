@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index05.html</title>
+</head>
+<body>
+<p>点击第一个按钮等待3秒，出现弹窗</p>
+<p>点击第二个按钮，阻止第一个函数运行</p>
+<button type="button" onclick="myFunction()">点我</button>
+<button onclick="stopFunction()">停止弹窗</button>
+<script type="text/javascript">
+	var myVar;
+	function myFunction() {
+		myVar = setTimeout(function() {alert("hello");},3000);
+	}
+	function stopFunction() {
+		clearTimeout(myVar);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	//窗口打开
+	function openWin() {
+		myWindow = window.open('','','width=200,height=100');
+		myWindow.document.write("<p>This is 'myWindow'</p>");
+		myWindow.blur();//确保新窗口获得键盘的控制，失去控制.blur();
+	}
+	//窗口关闭
+	function closeWin() {
+		myWindow.close();
+	}
+	//移动窗口到左上角
+	function moveWin() {
+		myWindow.moveTo(200,0);
+		myWindow.focus();
+	}
+	//调整窗口的宽度
+	function changeWin() {
+		myWindow.resizeTo(500, 500);
+		myWindow.focus();
+	}
+</script>
+<body>
+	<input type="button" value="open Window" onclick="openWin()" />
+	<input type="button" value="close Window" onclick="closeWin()" />
+	<input type="button" value="move Window" onclick="moveWin()" />
+	<input type="button" value="change Window" onclick="changeWin()" />
+</body>
+</html>

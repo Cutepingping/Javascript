@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index04.test</title>
+</head>
+<body>
+	<p>页面上显示时钟</p>
+	<p id="demo"></p>
+	<button onclick="myFunction()">关闭时钟</button>
+	<script type="text/javascript">
+		function myTime() {
+			var time = new Date();
+			var dTime = time.toLocaleTimeString();
+			document.getElementById('demo').innerHTML = dTime;
+		}
+		
+		var mayVar = setInterval(function() {
+			myTime()
+		},1000);
+
+		function myFunction() {
+			clearInterval(mayVar);
+		}
+		
+	</script>
+</body>
+</html>

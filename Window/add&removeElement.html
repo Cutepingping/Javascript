@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index02.test</title>
+</head>
+<body>
+<div id="divContent"></div>
+<input type="button" value="Click Me To Add" onclick="AddAndPrint()">
+<input type="button" value="Click Me To Remove" onclick="RemoveAndPrint()">
+<script type="text/javascript">
+	function dictionary() {
+		var _obj = new Object();
+		this.isContainedKey = function(k) {
+			var isContained = false;
+			for(var arr in _obj) {
+				if( arr == k){
+					isContained = true
+				}
+			};
+			return isContained;
+		}
+		this.addElement = function(k,v) {
+			if(!this.isContainedKey(k)) {
+				_obj[k] = v;
+			}
+		}
+		this.removeElement = function(k) {
+			if(this.isContainedKey) {
+				delete _obj[k];
+			}
+		}
+		this.printAll = function() {
+			var result = JSON.stringify(_obj);
+			return result;
+		}
+	}
+
+	var newD = new dictionary();
+	function AddAndPrint() {
+		newD.addElement('000','张三');
+		newD.addElement('001','张三');
+		newD.addElement('002','张三');
+		document.getElementById('divContent').innerHTML = newD.printAll();
+	}
+	function RemoveAndPrint() {
+		newD.removeElement('000');
+		document.getElementById('divContent').innerHTML = newD.printAll();
+	}
+
+</script>
+</body>
+</html>

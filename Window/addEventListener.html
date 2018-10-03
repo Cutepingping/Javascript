@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index1.test</title>
+</head>
+<body>
+<p>实例演示了在使用addEventListener()方法时，如何传递参数</p>
+<p>点击按钮执行计算</p>
+<div id="myBtn1">
+	<p id="myP1">点击段落，我是冒泡</p>
+</div>
+<div id="myBtn2">
+	<p id="myP2">点击段落，我是捕获</p>
+</div>
+<script type="text/javascript">
+	document.getElementById('myP1').addEventListener('click', function() {
+		alert('你点击了P事件');
+	}, false);
+	document.getElementById('myBtn1').addEventListener('click',function() {
+		alert('你点击了DIV事件');
+	}, false);
+	document.getElementById('myP2').addEventListener('click', function() {
+		alert('你点击了P事件');
+	}, true);
+	document.getElementById('myBtn2').addEventListener('click',function() {
+		alert('你点击了DIV事件');
+	}, true);
+</script>
+</body>
+</html>
